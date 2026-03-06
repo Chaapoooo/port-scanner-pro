@@ -1,5 +1,5 @@
-# **DO : pip -r requirements.txt or pip install colorama (since you only need to download one python lib)**
-# **-⚠️⚠️ Made for ethical and learning purposes only !! ⚠️⚠️**
+**DO : pip -r requirements.txt or pip install colorama (since you only need to download one python lib)**
+**-⚠️⚠️ Made for ethical and learning purposes only !! ⚠️⚠️**
 
 
 ### ------------------------ FRENCH HERE ------------------------ ###
