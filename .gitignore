@@ -1,9 +1,11 @@
-# Python
 __pycache__/
 *.py[cod]
 *$py.class
 venv/
 .venv/
 
-# Environnement VS Code
 .vscode/
+
+build/
+dist/
+*.spec
