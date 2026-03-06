@@ -16,10 +16,11 @@ async def main():
         print("-------------------------------")
         question = input("Do you want to scan all ports (1) or a specific range (2) ? (ex : 20-80) ")
         print("-------------------------------")
+        print(len(question))
+        if question.lower() == "1" and len(question) == 1: 
+            return await run_scanner(target_ip, range(1, 65536))
 
-        if question.lower() == "1": return await run_scanner(target_ip, range(1, 65536))
-
-        elif question.lower() == "2":
+        elif question.lower() == "2" and len(question) == 1:
             port_range = input("Enter the port range to scan (e.g., 20-80): ")
             start_port, end_port = map(int, port_range.split('-'))
             
@@ -27,16 +28,15 @@ async def main():
                 print("Invalid port range. Please enter a valid range (e.g., 20-80).")
                 exit()
             else: return await run_scanner(target_ip, range(start_port, end_port + 1))
-        else: return "Invalid input."
+        else: return print("Invalid input.")
 
-    elif question.lower() == "n": return "Scan cancelled."
+    elif question.lower() == "n": return print("Scan cancelled.")
 
-    else: return "Invalid input."
+    else: return print("Invalid input.")
 
 if __name__ == "__main__": # sert de sécurité
     try:
         asyncio.run(main())
-        print("Scan completed. Enter to exit.")
-        input()
+        input("Scan completed or cancelled. Enter to exit.")
     except KeyboardInterrupt:
         print("\nScan cancelled by User.")
