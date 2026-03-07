@@ -1,4 +1,4 @@
-**DO : pip -r requirements.txt or pip install colorama and customtkinter**
+**DO : pip -r requirements.txt or pip install colorama and customtkinter**  
 **⚠️⚠️ Made for ethical and learning purposes only !! ⚠️⚠️**  
 **Multiple themes are in the making**
 

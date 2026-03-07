@@ -11,7 +11,7 @@ class PortScannerGUI(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("Port Scanner Pro")
-        self.geometry("355x700")
+        self.geometry("850x700")
         self.resizable(False, False)
         self.is_scanning = False
 
@@ -20,14 +20,14 @@ class PortScannerGUI(ctk.CTk):
             self.iconbitmap(icon_path)
 
         # --- BACKGROUND IMAGE ---
-        #self.bg_image = ctk.CTkImage(
-        #    light_image=Image.open("assets/base_bg.png"), 
-        #    dark_image=Image.open("assets/base_bg.png"), 
-        #    size=(500, 700)
-        #) 
+        self.bg_image = ctk.CTkImage(
+            light_image=Image.open("assets/bg_image1.png"), 
+            dark_image=Image.open("assets/bg_image1.png"), 
+            size=(500, 700)
+        ) 
 
-        #self.bg_label = ctk.CTkLabel(self, image=self.bg_image, text="")
-        #self.bg_label.place(x=352, y=0)  #Not used for the main version
+        self.bg_label = ctk.CTkLabel(self, image=self.bg_image, text="")
+        self.bg_label.place(x=352, y=0)  #Not used for the main version
 
         # --- LEFT CONTROL PANEL ---
         #  Container to keep everything on the left side (inputs, buttons, progress bar)
@@ -79,8 +79,8 @@ class PortScannerGUI(ctk.CTk):
         self.console.tag_config("info", foreground="#00CCFF")  # Cyan
 
         # Separator lines
-        #self.separator = ctk.CTkFrame(self, width=5, height=700, fg_color="#191919")
-        #self.separator.place(x=365, y=0)
+        self.separator = ctk.CTkFrame(self, width=5, height=700, fg_color="#191919")
+        self.separator.place(x=365, y=0)
 
         # Save logs button
         self.save_btn = ctk.CTkButton(self.left_frame, width=70, height=30, text="SAVE LOGS",
