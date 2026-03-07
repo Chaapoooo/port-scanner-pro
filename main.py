@@ -20,9 +20,10 @@ class PortScannerGUI(ctk.CTk):
             self.iconbitmap(icon_path)
 
         # --- BACKGROUND IMAGE ---
+        background_image = os.path.join(os.path.dirname(__file__), "assets", "bg_image2.png") # the bg_images are in assets folder
         self.bg_image = ctk.CTkImage(
-            light_image=Image.open("assets/bg_image1.png"), 
-            dark_image=Image.open("assets/bg_image1.png"), 
+            light_image=Image.open(background_image), 
+            dark_image=Image.open(background_image), 
             size=(500, 700)
         ) 
 
@@ -80,7 +81,7 @@ class PortScannerGUI(ctk.CTk):
 
         # Separator lines
         self.separator = ctk.CTkFrame(self, width=5, height=700, fg_color="#191919")
-        self.separator.place(x=365, y=0)
+        self.separator.place(x=360, y=0)
 
         # Save logs button
         self.save_btn = ctk.CTkButton(self.left_frame, width=70, height=30, text="SAVE LOGS",
